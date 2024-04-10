@@ -7,6 +7,7 @@
 
 body {
   color: #333533;
+  background-color: #f5f5f5;
 }
 
 a {
@@ -93,7 +94,6 @@ nav ul {
 
 li {
   list-style-type: none;
-  cursor: pointer;
 }
 
 nav ul li {
@@ -130,14 +130,14 @@ nav ul span i {
   font-size: 22px;
 }
 
-li:hover span,
+nav ul li:hover span,
 span.active {
   background-color: #333533;
   color: #ffd100;
   border: none;
 }
 
-li:not(:last-child)::after {
+nav ul li:not(:last-child)::after {
   content: "";
   position: absolute;
   height: 48px;
@@ -152,27 +152,24 @@ li:not(:last-child)::after {
   border-left: 1px solid #333533;
 }
 
-.sections .social a {
-  background-image: url();
-}
-
-.sections section h4 {
+.sections .one h4,
+.two h4 {
   margin: 21.28px 0;
 }
 
-.sections section p {
+.sections .one p {
   margin: 16px 0;
 }
 
-.sections div span {
+.sections .one div span {
   width: 50%;
 }
 
-.sections div {
+.sections .e {
   display: flex;
 }
 
-.sections h5 {
+.sections .one h5 {
   margin-top: 30.06px;
   margin-bottom: 10px;
   color: #a0a0a0;
@@ -180,24 +177,25 @@ li:not(:last-child)::after {
   font-weight: 500;
 }
 
-.sections div p {
+.sections .one div p {
   margin-top: 0;
 }
 
-.sections section p i {
+.sections .one p i {
   margin-left: 10px;
   font-size: 16px;
   color: #a0a0a0;
   cursor: pointer;
 }
 
-.sections section p i:hover {
+.sections .one p i:hover {
   color: #333533;
 }
 
 .social {
   display: flex;
   justify-content: space-between;
+  margin: 16px 0;
 }
 
 .social li a {
@@ -261,4 +259,135 @@ li:not(:last-child)::after {
 
 .social li .whatsapp:hover {
   background-image: url("../whatsapp-hover.png");
+}
+
+.two li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  border: 1px solid #a0a0a0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.two li img {
+  margin-right: 5px;
+}
+
+.two li span {
+  display: flex;
+  align-items: center;
+}
+
+.two li span i {
+  padding: 10px 12px;
+  border-left: 1px solid #a0a0a0;
+}
+
+.skills li .tittle {
+  font-weight: 400;
+  font-size: larger;
+}
+
+.two li span:last-child {
+  display: flex;
+  align-items: center;
+  width: 125.688px;
+  height: 36.01px;
+}
+
+.two h5 {
+  color: #a0a0a0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.two .qther {
+  margin: 16px 0;
+}
+
+.sections .two .qther li {
+  display: inline-block;
+  padding: 4px 16px;
+  margin: 0 16px 18px 0;
+  border: 1px solid #333533;
+  border-radius: 24px;
+}
+
+.sections .three .projects {
+  display: flex;
+  flex-wrap: wrap;
+  width: 880px;
+}
+
+.sections .three h4 {
+  margin: 21.28px 0;
+}
+
+.sections .three .project {
+  display: flex;
+  flex-direction: column;
+  width: 27%;
+  padding: 11px;
+  margin: 0 20px 36px 0;
+  border: 1px solid #a0a0a0;
+  border-radius: 8px;
+}
+
+.sections .three h6 {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.sections .three p {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 14px 0;
+}
+
+.sections .three .tech img {
+  width: 25px;
+}
+
+.sections .three ul {
+  display: flex;
+}
+
+.sections .three .tech {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sections .three .btn2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sections .three .btn2 button {
+  width: 50%;
+  cursor: pointer;
+  background: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.sections .three .btn2 .demo {
+  border: 1px solid transparent;
+}
+
+.sections .three .btn2 .view {
+  border: 1px solid #333533;
+  margin-left: 4px;
+}
+
+.sections .three .btn2 .demo:hover {
+  border-color: #333533;
+}
+
+.sections .three .btn2 .view:hover {
+  color: #f5f5f5;
+  background-color: #333533;
 }
