@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Noto Serif", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -88,7 +89,7 @@ header .lang:hover {
   padding: 45px 0;
 }
 
-nav ul {
+.container nav ul {
   width: 250px;
 }
 
@@ -96,23 +97,23 @@ li {
   list-style-type: none;
 }
 
-nav ul li {
+.container nav ul li {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-nav li:not(:last-child) {
+.container nav li:not(:last-child) {
   margin-bottom: 80px;
 }
 
-nav ul li a {
+.container nav ul li a {
   font-size: 22px;
   color: #333533;
   font-weight: 600;
 }
 
-nav ul span {
+.container nav ul span {
   position: relative;
   display: inline-block;
   width: 42px;
@@ -122,7 +123,7 @@ nav ul span {
   margin-right: 12px;
 }
 
-nav ul span i {
+.container nav ul span i {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -130,14 +131,14 @@ nav ul span i {
   font-size: 22px;
 }
 
-nav ul li:hover span,
+.container nav ul li:hover span,
 span.active {
   background-color: #333533;
   color: #ffd100;
   border: none;
 }
 
-nav ul li:not(:last-child)::after {
+.container nav ul li:not(:last-child)::after {
   content: "";
   position: absolute;
   height: 48px;
@@ -390,4 +391,144 @@ nav ul li:not(:last-child)::after {
 .sections .three .btn2 .view:hover {
   color: #f5f5f5;
   background-color: #333533;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    background-color: #fafafa;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .sections,
+  .sections section {
+    width: auto;
+    border: none;
+  }
+
+  header {
+    height: auto;
+    color: #333533;
+    padding: 0;
+  }
+
+  header img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 75px;
+  }
+
+  header div h1,
+  header div h2,
+  header div h2 i,
+  header div .btn {
+    color: #333533;
+  }
+
+  .lang {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  header div h1 {
+    font-size: 36px;
+  }
+
+  header div h2 {
+    font-size: 24px;
+    margin: 30px 0;
+  }
+
+  header div .btn {
+    display: block;
+    border-color: #333533;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  header div {
+    background-color: #fafafa;
+    padding: 100px 0px 60px;
+    margin: 0;
+    margin-top: 150px;
+    text-align: center;
+  }
+
+  .sections {
+    padding: 0 40px;
+  }
+
+  .sections section {
+    border-top: 1px solid #d9d9d9;
+    padding: 40px 0;
+  }
+
+  .e {
+    flex-wrap: wrap;
+  }
+
+  .sections .one div span {
+    width: 100%;
+  }
+
+  .sections .three .projects {
+    width: 100%;
+  }
+
+  .social {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .social li {
+    margin-right: 10px;
+  }
+
+  .projects {
+    justify-content: center;
+  }
+
+  .sections .projects .project {
+    width: 100%;
+    max-width: 1980px;
+    margin: 0 0 20px 0;
+  }
+
+  #mobile-nav {
+    display: block;
+    background-color: #333533;
+    color: #fafafa;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #mobile-nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  #mobile-nav ul li {
+    padding: 15px 0;
+    text-align: center;
+    flex: 1;
+  }
+
+  #mobile-nav ul li.active {
+    color: #ffd100;
+    border-bottom: 4px solid #ffd100;
+  }
 }
